@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+<div class="all-box">
+    <!--project-1-->
+    <div class="all-box-1">
+        <div class="button">
+            <div class="circle-1">
+                <div class="circle-1-1"></div>
+            </div>
+            <div class="circle-2">
+                <div class="circle-1-2"></div>
+            </div>
+            <button>Register</button>
+        </div>
+    </div>
+    <!--project-1-end-->
+    <!--project-2-->
+    <div class="all-box-2">
+        <div class="box-root-1-2">
+            <div class="top-menu-root">
+                <div class="line-hover">
+                    <div class="bg-hover"></div>
+                </div>
+                <ul>
+                    <li>OVERVIEW</li>
+                    <li>RECOMMENDED</li>
+                    <li>IN PROGRESS</li>
+                    <li>TO-DO</li>
+                    <li>KNOWLEDGE</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--project-2-end-->
+    <!--project-2-end-->
+</div>
+<script>
+    /***************** project-2 ********************/
+    let WidthLi = $("div.box-root-1-2 > div.top-menu-root > ul > li")
+    let LineHover = $("div.line-hover")
+    let padding = 48
+    WidthLi.hover(function () {
+        $('.bg-hover').css({'width': '200px'})
+        let width = $(this).width() + padding
+        let position = $(this).position()
+        LineHover.css({'width': width, 'left': position.left})
+    }, function () {
+        $('.bg-hover').css({'width': '0'})
+    })
+    WidthLi.hover(function () {
+        $(this).addClass('hover-1')
+    }, function () {
+        $(this).removeClass('hover-1')
+    })
+    /***************** project-2-end ********************/
+
+
+</script>
+</body>
+</html>
